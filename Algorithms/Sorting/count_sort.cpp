@@ -5,12 +5,17 @@ void countsort(vector<int>arr){
 vector<int>count(100,0);
     vector<int>::iterator itr;
 int m = arr.size();
-for (int j = 0;j<m;j++){
+int j;
+for ( j = 0;j<m;j++){
     count[arr[j]]++;
 }
 
-                for (itr = count.begin();itr < count.end();itr++){
-                cout << *itr << " ";
+                for (j = 0;j<100;j++){
+                    if(count[j] > 0){
+                    for (int f = 0;f <count[j];f++ ){
+                        cout << j<< " ";
+                    }
+                    }
             }
             cout <<  endl;
 
